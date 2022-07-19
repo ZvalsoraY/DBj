@@ -1,3 +1,7 @@
+using Microsoft.Extensions.Configuration;
+using BLL;
+using DAL;
+
 namespace JKX
 {
     internal static class Program
@@ -8,10 +12,35 @@ namespace JKX
         [STAThread]
         static void Main()
         {
-            // To customize application configuration such as set high DPI settings or default font,
-            // see https://aka.ms/applicationconfiguration.
-            ApplicationConfiguration.Initialize();
-            Application.Run(new Form1());
+            //// To customize application configuration such as set high DPI settings or default font,
+            //// see https://aka.ms/applicationconfiguration.
+            //ApplicationConfiguration.Initialize();
+            //Application.Run(new Form1());
+
+            Application.SetHighDpiMode(HighDpiMode.SystemAware);
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+
+            var configurationBuilder = new ConfigurationBuilder();
+            configurationBuilder.AddJsonFile("appConfig.json");
+
+            var config = configurationBuilder.Build();
+            var connectionString = config["ConnectionString"];
+
+            var daoCounter = new CounterDAO(connectionString);
+            var logicCounter = new CounterBL(daoCounter);
+
+            var daoRate = new RateDAO(connectionString);
+            var logicRate = new RateBL(daoRate);
+
+            var daoReading = new ReadingDAO(connectionString);
+            var logicReading = new ReadingBL(daoReading);
+
+            var daoService = new ServiceDAO(connectionString);
+            var logicService = new ServiceBL(daoService);
+
+            Application.Run(new Form1(logicCounter, logicRate, logicReading, logicService));
+
         }
     }
 }
