@@ -7,7 +7,7 @@ using Entities;
 
 namespace Interfaces
 {
-    internal class IRateDAO
+    public class IRateDAO
     {
         public IEnumerable<Rate> GetAll();
         public void Add(Rate rate);
