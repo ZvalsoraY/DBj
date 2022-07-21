@@ -29,3 +29,132 @@ CREATE TABLE Readings(
 	CurValue FLOAT NOT NULL,
 	TransDate DATE NOT NULL	
 	)
+	
+CREATE PROCEDURE [dbo].[Services] AS
+	SELECT * FROM Services
+	GO
+CREATE PROCEDURE [dbo].[Rates] AS
+	SELECT * FROM Rates
+	GO
+CREATE PROCEDURE [dbo].[Counters] AS
+	SELECT * FROM Counters
+	GO
+CREATE PROCEDURE [dbo].[Readings] AS
+	SELECT * FROM Readings
+	GO
+	
+--------------------------------------------------------------------
+
+CREATE PROCEDURE [dbo].[AddService]
+	@name NVARCHAR(50),
+AS
+	INSERT INTO dbo.Services(Name)
+	VALUES (@name)
+	GO	
+CREATE PROCEDURE [dbo].[UpdateService]
+	@id INT,
+	@name NVARCHAR(50)
+AS 
+	UPDATE dbo.Services
+	set Name = @name
+	where Id = @id
+	GO
+CREATE PROC [dbo].[DeleteService]
+	@id INT 
+AS
+	DELETE FROM dbo.Services 
+	WHERE Id = @id
+	GO
+	
+--------------------------------------------------------------------
+	
+CREATE PROCEDURE [dbo].[AddRate]
+	@name NVARCHAR(50),
+	@serviceId INT,
+	@price INT,
+	@startData DATE,
+	@endData DATE
+AS
+	INSERT INTO dbo.Rates(Name, ServiceId, Price, StartData, EndData)
+	VALUES (@name, @serviceId, @price, @startData, @endData)
+	GO	
+CREATE PROCEDURE [dbo].[UpdateRate]
+	@id INT,
+	@name NVARCHAR(50),
+	@serviceId INT,
+	@price INT,
+	@startData DATE,
+	@endData DATE
+AS 
+	UPDATE dbo.Rates
+	set Name = @name, ServiceId = @serviceId, Price = @price, StartData = @startData, EndData = @endData
+	where Id = @id
+	GO
+CREATE PROC [dbo].[DeleteRate]
+	@id INT 
+AS
+	DELETE FROM dbo.Rates 
+	WHERE Id = @id
+	GO
+
+--------------------------------------------------------------------
+
+CREATE PROCEDURE [dbo].[AddCounter]
+	@serviceId INT,
+	@serialNumber INT,
+	@capacity INT,
+	@decimalCapacity INT,
+	@initialValue FLOAT,
+	@createData DATE
+AS
+	INSERT INTO dbo.Counters(ServiceId, SerialNumber, Capacity, DecimalCapacity, InitialValue, CreateData)
+	VALUES (@serviceId, @serialNumber, @capacity, @decimalCapacity, @initialValue, @createData)
+	GO	
+CREATE PROCEDURE [dbo].[UpdateCounter]
+	@id INT,
+	@serviceId INT,
+	@serialNumber INT,
+	@capacity INT,
+	@decimalCapacity INT,
+	@initialValue FLOAT,
+	@createData DATE
+AS 
+	UPDATE dbo.Counters
+	set ServiceId = @serviceId, SerialNumber = @serialNumber, Capacity = @capacity, DecimalCapacity = @decimalCapacity, InitialValue = @initialValue, CreateData = @createData
+	where Id = @id
+	GO
+CREATE PROC [dbo].[DeleteCounter]
+	@id INT 
+AS
+	DELETE FROM dbo.Counters 
+	WHERE Id = @id
+	GO
+
+--------------------------------------------------------------------
+
+CREATE PROCEDURE [dbo].[AddReading]
+	@serviceId INT,
+	@curValue FLOAT,
+	@transDate DATE
+AS
+	INSERT INTO dbo.Readings(ServiceId, CurValue, TransDate)
+	VALUES (@serviceId, @curValue, @transDate)
+	GO	
+CREATE PROCEDURE [dbo].[UpdateReading]
+	@id INT,
+	@serviceId INT,
+	@curValue FLOAT,
+	@transDate DATE
+AS 
+	UPDATE dbo.Readings
+	set ServiceId = @serviceId, CurValue = @curValue, TransDate = @transDate
+	where Id = @id
+	GO
+CREATE PROC [dbo].[DeleteReading]
+	@id INT 
+AS
+	DELETE FROM dbo.Readings 
+	WHERE Id = @id
+	GO
+
+--------------------------------------------------------------------
