@@ -7,7 +7,7 @@ using Entities;
 
 namespace Interfaces
 {
-    public class IServiceBL
+    public interface IServiceBL
     {
         public IEnumerable<Service> GetAll();
         public void Add(Service service);

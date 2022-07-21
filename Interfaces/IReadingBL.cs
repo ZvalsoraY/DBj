@@ -7,7 +7,7 @@ using Entities;
 
 namespace Interfaces
 {
-    public class IReadingBL
+    public interface IReadingBL
     {
         public IEnumerable<Reading> GetAll();
         public void Add(Reading reading);

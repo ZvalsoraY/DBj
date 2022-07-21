@@ -7,7 +7,7 @@ using Entities;
 
 namespace Interfaces
 {
-    public class IRateBL
+    public interface IRateBL
     {
         public IEnumerable<Rate> GetAll();
         public void Add(Rate rate);

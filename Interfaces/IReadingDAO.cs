@@ -7,11 +7,11 @@ using Entities;
 
 namespace Interfaces
 {
-    public class IReadingDAO
+    public interface IReadingDAO
     {
-        public IEnumerable<Reading> GetAll();
-        public void Add(Reading reading);
-        public void Edit(Reading reading);
-        public void Delete(Reading reading);
+        IEnumerable<Reading> GetAll();
+        void Add(Reading reading);
+        void Edit(Reading reading);
+        void Delete(Reading reading);
     }
 }

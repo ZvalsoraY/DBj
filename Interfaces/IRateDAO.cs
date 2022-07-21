@@ -7,11 +7,11 @@ using Entities;
 
 namespace Interfaces
 {
-    public class IRateDAO
+    public interface IRateDAO
     {
-        public IEnumerable<Rate> GetAll();
-        public void Add(Rate rate);
-        public void Edit(Rate rate);
-        public void Delete(Rate rate);
+        IEnumerable<Rate> GetAll();
+        void Add(Rate rate);
+        void Edit(Rate rate);
+        void Delete(Rate rate);
     }
 }

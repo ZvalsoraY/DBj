@@ -7,11 +7,11 @@ using Entities;
 
 namespace Interfaces
 {
-    public class ICounterDAO
+    public interface ICounterDAO
     {
-        public IEnumerable<Counter> GetAll();
-        public void Add(Counter counter);
-        public void Edit(Counter counter);
-        public void Delete(Counter counter);
+        IEnumerable<Counter> GetAll();
+        void Add(Counter counter);
+        void Edit(Counter counter);
+        void Delete(Counter counter);
     }
 }

@@ -7,7 +7,7 @@ using Entities;
 
 namespace Interfaces
 {
-    public class ICounterBL
+    public interface ICounterBL
     {
         public IEnumerable<Counter> GetAll();
         public void Add(Counter counter);
