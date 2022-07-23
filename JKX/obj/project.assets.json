@@ -1031,6 +1031,7 @@
     "net6.0-windows7.0": [
       "BLL >= 1.0.0",
       "DAL >= 1.0.0",
+      "Interfaces >= 1.0.0",
       "Microsoft.Extensions.Configuration.Json >= 7.0.0-preview.6.22324.4",
       "System.Data.SqlClient >= 4.8.3"
     ]
@@ -1072,6 +1073,9 @@
             },
             "C:\\Users\\Master\\Documents\\C_sharp\\Repositories\\jkx\\DAL\\DAL.csproj": {
               "projectPath": "C:\\Users\\Master\\Documents\\C_sharp\\Repositories\\jkx\\DAL\\DAL.csproj"
+            },
+            "C:\\Users\\Master\\Documents\\C_sharp\\Repositories\\jkx\\Interfaces\\Interfaces.csproj": {
+              "projectPath": "C:\\Users\\Master\\Documents\\C_sharp\\Repositories\\jkx\\Interfaces\\Interfaces.csproj"
             }
           }
         }
