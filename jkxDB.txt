@@ -46,7 +46,7 @@ CREATE PROCEDURE [dbo].[Readings] AS
 --------------------------------------------------------------------
 
 CREATE PROCEDURE [dbo].[AddService]
-	@name NVARCHAR(50),
+	@name NVARCHAR(50)
 AS
 	INSERT INTO dbo.Services(Name)
 	VALUES (@name)
