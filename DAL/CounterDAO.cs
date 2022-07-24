@@ -39,7 +39,7 @@ namespace DAL
                         reader.GetInt32(3),
                         reader.GetInt32(4),
                         reader.GetInt32(5),
-                        reader.GetFloat(6),
+                        reader.GetDouble(6),
                         reader.GetDateTime(7)
                     );
                     counters.Add(counter);
@@ -59,7 +59,7 @@ namespace DAL
                 command.Parameters.Add("serialNumber", SqlDbType.Int).Value = counter.SerialNumber;
                 command.Parameters.Add("capacity", SqlDbType.Int).Value = counter.Capacity;
                 command.Parameters.Add("decimalCapacity", SqlDbType.Int).Value = counter.DecimalCapacity;
-                command.Parameters.Add("initialValue", SqlDbType.Int).Value = counter.InitialValue;
+                command.Parameters.Add("initialValue", SqlDbType.Float).Value = counter.InitialValue;
                 command.Parameters.Add("createData", SqlDbType.Date).Value = counter.CreateData;
 
                 command.ExecuteNonQuery();

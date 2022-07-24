@@ -33,7 +33,7 @@ namespace DAL
                     (
                         reader.GetInt32(0),
                         reader.GetInt32(1),
-                        reader.GetFloat(2),
+                        reader.GetDouble(2),
                         reader.GetDateTime(3)
                     );
                     readings.Add(reading);

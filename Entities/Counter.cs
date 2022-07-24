@@ -14,7 +14,7 @@ namespace Entities
         private int _serialNumber;
         private int _capacity;
         private int _decimalCapacity;
-        private float _initialValue;
+        private double _initialValue;
         private DateTime _createData;
 
         public int Id
@@ -85,7 +85,7 @@ namespace Entities
                 _decimalCapacity = value;
             }
         }
-        public float InitialValue
+        public double InitialValue
         {
             get => _initialValue;
             set
@@ -111,7 +111,7 @@ namespace Entities
                 _createData = value;
             }
         }
-        public Counter(int id, string name, int serviceId, int serialNumber, int capacity, int decimalCapacity, float initialValue, DateTime createData)
+        public Counter(int id, string name, int serviceId, int serialNumber, int capacity, int decimalCapacity, double initialValue, DateTime createData)
         {
             Id = id;
             Name = name;
@@ -122,7 +122,7 @@ namespace Entities
             InitialValue = initialValue;
             CreateData = createData;
         }
-        public Counter(string name, int serviceId, int serialNumber, int capacity, int decimalCapacity, float initialValue, DateTime createData)
+        public Counter(string name, int serviceId, int serialNumber, int capacity, int decimalCapacity, double initialValue, DateTime createData)
             : this(0, name, serviceId, serialNumber, capacity, decimalCapacity, initialValue, createData)
         {
         }

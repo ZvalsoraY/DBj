@@ -32,19 +32,22 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.dgvServices = new System.Windows.Forms.DataGridView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
             this.dgvRates = new System.Windows.Forms.DataGridView();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
             this.dgvCounters = new System.Windows.Forms.DataGridView();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
             this.dgvReadings = new System.Windows.Forms.DataGridView();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.btnEdit = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
             this.TabPage.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvServices)).BeginInit();
             this.tabPage2.SuspendLayout();
-            this.tabPage3.SuspendLayout();
-            this.tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRates)).BeginInit();
+            this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCounters)).BeginInit();
+            this.tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReadings)).BeginInit();
             this.SuspendLayout();
             // 
@@ -92,6 +95,16 @@
             this.tabPage2.Text = "Rates";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // dgvRates
+            // 
+            this.dgvRates.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvRates.Location = new System.Drawing.Point(6, 6);
+            this.dgvRates.Name = "dgvRates";
+            this.dgvRates.RowHeadersWidth = 51;
+            this.dgvRates.RowTemplate.Height = 29;
+            this.dgvRates.Size = new System.Drawing.Size(771, 348);
+            this.dgvRates.TabIndex = 0;
+            // 
             // tabPage3
             // 
             this.tabPage3.Controls.Add(this.dgvCounters);
@@ -102,6 +115,16 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Counters";
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // dgvCounters
+            // 
+            this.dgvCounters.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCounters.Location = new System.Drawing.Point(3, 3);
+            this.dgvCounters.Name = "dgvCounters";
+            this.dgvCounters.RowHeadersWidth = 51;
+            this.dgvCounters.RowTemplate.Height = 29;
+            this.dgvCounters.Size = new System.Drawing.Size(774, 351);
+            this.dgvCounters.TabIndex = 0;
             // 
             // tabPage4
             // 
@@ -114,26 +137,6 @@
             this.tabPage4.Text = "Readings";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
-            // dgvRates
-            // 
-            this.dgvRates.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvRates.Location = new System.Drawing.Point(6, 6);
-            this.dgvRates.Name = "dgvRates";
-            this.dgvRates.RowHeadersWidth = 51;
-            this.dgvRates.RowTemplate.Height = 29;
-            this.dgvRates.Size = new System.Drawing.Size(771, 348);
-            this.dgvRates.TabIndex = 0;
-            // 
-            // dgvCounters
-            // 
-            this.dgvCounters.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCounters.Location = new System.Drawing.Point(3, 3);
-            this.dgvCounters.Name = "dgvCounters";
-            this.dgvCounters.RowHeadersWidth = 51;
-            this.dgvCounters.RowTemplate.Height = 29;
-            this.dgvCounters.Size = new System.Drawing.Size(774, 351);
-            this.dgvCounters.TabIndex = 0;
-            // 
             // dgvReadings
             // 
             this.dgvReadings.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -144,11 +147,42 @@
             this.dgvReadings.Size = new System.Drawing.Size(768, 354);
             this.dgvReadings.TabIndex = 0;
             // 
+            // btnAdd
+            // 
+            this.btnAdd.Location = new System.Drawing.Point(14, 399);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(94, 44);
+            this.btnAdd.TabIndex = 1;
+            this.btnAdd.Text = "Add";
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // btnEdit
+            // 
+            this.btnEdit.Location = new System.Drawing.Point(168, 399);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(107, 44);
+            this.btnEdit.TabIndex = 2;
+            this.btnEdit.Text = "Edit";
+            this.btnEdit.UseVisualStyleBackColor = true;
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Location = new System.Drawing.Point(334, 399);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(119, 44);
+            this.btnDelete.TabIndex = 3;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnDelete);
+            this.Controls.Add(this.btnEdit);
+            this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.TabPage);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -157,10 +191,10 @@
             this.tabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvServices)).EndInit();
             this.tabPage2.ResumeLayout(false);
-            this.tabPage3.ResumeLayout(false);
-            this.tabPage4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvRates)).EndInit();
+            this.tabPage3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCounters)).EndInit();
+            this.tabPage4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvReadings)).EndInit();
             this.ResumeLayout(false);
 
@@ -177,5 +211,8 @@
         private DataGridView dgvRates;
         private DataGridView dgvCounters;
         private DataGridView dgvReadings;
+        private Button btnAdd;
+        private Button btnEdit;
+        private Button btnDelete;
     }
 }

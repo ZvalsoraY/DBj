@@ -10,7 +10,7 @@ namespace Entities
     {
         private int _id;
         private int _serviceId;
-        private float _curValue;
+        private double _curValue;
         private DateTime _transDate;
         
         public int Id
@@ -30,7 +30,7 @@ namespace Entities
                 _serviceId = value;
             }
         }
-        public float CurValue
+        public double CurValue
         {
             get => _curValue;
             set
@@ -57,14 +57,14 @@ namespace Entities
             }
         }
               
-        public Reading(int id, int serviceId, float curValue, DateTime trunsDate)
+        public Reading(int id, int serviceId, double curValue, DateTime trunsDate)
         {
             Id = id;
             ServiceId = serviceId;
             CurValue = curValue;
             TransDate = trunsDate;
         }
-        public Reading(int serviceId, float curValue, DateTime trunsDate)
+        public Reading(int serviceId, double curValue, DateTime trunsDate)
             : this(0, serviceId, curValue, trunsDate)
         {
         }

@@ -42,3 +42,7 @@ C:\Users\Master\Documents\C_sharp\Repositories\jkx\JKX\bin\Debug\net6.0-windows\
 C:\Users\Master\Documents\C_sharp\Repositories\jkx\JKX\bin\Debug\net6.0-windows\Interfaces.pdb
 C:\Users\Master\Documents\C_sharp\Repositories\jkx\JKX\obj\Debug\net6.0-windows\PL.WinForms.csproj.CopyComplete
 C:\Users\Master\Documents\C_sharp\Repositories\jkx\JKX\bin\Debug\net6.0-windows\appConfig.json
+C:\Users\Master\Documents\C_sharp\Repositories\jkx\JKX\obj\Debug\net6.0-windows\PL.WinForms.EditCounterForm.resources
+C:\Users\Master\Documents\C_sharp\Repositories\jkx\JKX\obj\Debug\net6.0-windows\PL.WinForms.EditRateForm.resources
+C:\Users\Master\Documents\C_sharp\Repositories\jkx\JKX\obj\Debug\net6.0-windows\PL.WinForms.EditReadingForm.resources
+C:\Users\Master\Documents\C_sharp\Repositories\jkx\JKX\obj\Debug\net6.0-windows\PL.WinForms.EditServiceForm.resources
