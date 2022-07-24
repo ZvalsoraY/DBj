@@ -16,5 +16,13 @@ namespace JKX
             _serviceBL = serviceBL;
             InitializeComponent();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            dgvServices.DataSource = _serviceBL.GetAll();
+            dgvRates.DataSource = _rateBL.GetAll();
+            dgvCounters.DataSource = _counterBL.GetAll();
+            dgvReadings.DataSource = _readingBL.GetAll();
+        }
     }
 }

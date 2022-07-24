@@ -1,3 +1,5 @@
+using System;
+using System.Windows.Forms;
 using Microsoft.Extensions.Configuration;
 using BLL;
 using DAL;
@@ -27,6 +29,9 @@ namespace JKX
             var config = configurationBuilder.Build();
             var connectionString = config["ConnectionString"];
 
+            var daoService = new ServiceDAO(connectionString);
+            var logicService = new ServiceBL(daoService);
+
             var daoCounter = new CounterDAO(connectionString);
             var logicCounter = new CounterBL(daoCounter);
 
@@ -36,8 +41,6 @@ namespace JKX
             var daoReading = new ReadingDAO(connectionString);
             var logicReading = new ReadingBL(daoReading);
 
-            var daoService = new ServiceDAO(connectionString);
-            var logicService = new ServiceBL(daoService);
 
             Application.Run(new Form1(logicCounter, logicRate, logicReading, logicService));
 

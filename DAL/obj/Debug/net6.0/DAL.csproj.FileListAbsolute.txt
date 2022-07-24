@@ -1,0 +1,17 @@
+C:\Users\Master\Documents\C_sharp\Repositories\jkx\DAL\obj\Debug\net6.0\DAL.csproj.AssemblyReference.cache
+C:\Users\Master\Documents\C_sharp\Repositories\jkx\DAL\obj\Debug\net6.0\DAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Master\Documents\C_sharp\Repositories\jkx\DAL\obj\Debug\net6.0\DAL.AssemblyInfoInputs.cache
+C:\Users\Master\Documents\C_sharp\Repositories\jkx\DAL\obj\Debug\net6.0\DAL.AssemblyInfo.cs
+C:\Users\Master\Documents\C_sharp\Repositories\jkx\DAL\obj\Debug\net6.0\DAL.csproj.CoreCompileInputs.cache
+C:\Users\Master\Documents\C_sharp\Repositories\jkx\DAL\bin\Debug\net6.0\DAL.deps.json
+C:\Users\Master\Documents\C_sharp\Repositories\jkx\DAL\bin\Debug\net6.0\DAL.dll
+C:\Users\Master\Documents\C_sharp\Repositories\jkx\DAL\bin\Debug\net6.0\DAL.pdb
+C:\Users\Master\Documents\C_sharp\Repositories\jkx\DAL\bin\Debug\net6.0\Entities.dll
+C:\Users\Master\Documents\C_sharp\Repositories\jkx\DAL\bin\Debug\net6.0\Interfaces.dll
+C:\Users\Master\Documents\C_sharp\Repositories\jkx\DAL\bin\Debug\net6.0\Entities.pdb
+C:\Users\Master\Documents\C_sharp\Repositories\jkx\DAL\bin\Debug\net6.0\Interfaces.pdb
+C:\Users\Master\Documents\C_sharp\Repositories\jkx\DAL\obj\Debug\net6.0\DAL.csproj.CopyComplete
+C:\Users\Master\Documents\C_sharp\Repositories\jkx\DAL\obj\Debug\net6.0\DAL.dll
+C:\Users\Master\Documents\C_sharp\Repositories\jkx\DAL\obj\Debug\net6.0\refint\DAL.dll
+C:\Users\Master\Documents\C_sharp\Repositories\jkx\DAL\obj\Debug\net6.0\DAL.pdb
+C:\Users\Master\Documents\C_sharp\Repositories\jkx\DAL\obj\Debug\net6.0\ref\DAL.dll
