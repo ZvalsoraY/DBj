@@ -62,8 +62,8 @@ namespace DAL
         public void Edit(Rate rate)
         {
             using (var connection = new SqlConnection(_connectionString))
-            using (var command = new SqlCommand("EXEC UpdateRead @Id, @serviceId, @price, @startData, @endData", connection))
-            {
+            using (var command = new SqlCommand("EXEC UpdateRate @Id, @name, @serviceId, @price, @startData, @endData", connection))
+            {//int id, string name, int serviceId, int price, DateTime startData, DateTime endData
                 connection.Open();
 
                 command.Parameters.Add("Id", SqlDbType.Int).Value = rate.Id;
@@ -79,7 +79,7 @@ namespace DAL
         public void Delete(Rate rate)
         {
             using (var connection = new SqlConnection(_connectionString))
-            using (var command = new SqlCommand("EXEC DeleteRead @Id", connection))
+            using (var command = new SqlCommand("EXEC DeleteRate @Id", connection))
             {
                 connection.Open();
 

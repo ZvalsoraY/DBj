@@ -14,6 +14,7 @@ namespace PL.WinForms
     public partial class EditRateForm : Form
     {
         public Rate LocalRate { get; set; }
+        
         public EditRateForm(Rate rate)
         {
             if (rate == null)
@@ -44,7 +45,7 @@ namespace PL.WinForms
             dtpDataTo.Value = LocalRate.EndData;
         }
         
-        private void btnSaveService_Click_Click(object sender, EventArgs e)
+        private void btnSaveRate_Click_Click(object sender, EventArgs e)
         {
             var isValid = true;
             errorProvider1.Clear();
@@ -83,7 +84,7 @@ namespace PL.WinForms
                 Close();
             }
         }
-        
+
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -95,9 +96,9 @@ namespace PL.WinForms
 
         }
 
-        private void btnSaveRate_Click_Click(object sender, EventArgs e)
-        {
+        //private void btnSaveRate_Click_Click(object sender, EventArgs e)
+        //{
 
-        }
+        //}
     }
 }

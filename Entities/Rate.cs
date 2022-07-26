@@ -54,7 +54,7 @@ namespace Entities
             get => _startData;
             set
             {
-                if (value > _endData || DateTime.Now.Year - value.Year > 150)
+                if (DateTime.Now.Year - value.Year > 150)
                 {
                     throw new ArgumentOutOfRangeException();
                 }
@@ -67,7 +67,7 @@ namespace Entities
             get => _endData;
             set
             {
-                if (value < _startData || DateTime.Now.Year - value.Year > 150)
+                if (DateTime.Now.Year - value.Year > 150)
                 {
                     throw new ArgumentOutOfRangeException();
                 }

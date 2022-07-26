@@ -14,6 +14,7 @@ namespace PL.WinForms
     public partial class EditServiceForm : Form
     {
         public Service LocalService { get; set; }
+
         public EditServiceForm(Service service)
         {
             if (service == null)

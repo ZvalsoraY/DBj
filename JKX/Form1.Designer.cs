@@ -58,18 +58,20 @@
             this.TabPage.Controls.Add(this.tabPage3);
             this.TabPage.Controls.Add(this.tabPage4);
             this.TabPage.Location = new System.Drawing.Point(0, 0);
+            this.TabPage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TabPage.Name = "TabPage";
             this.TabPage.SelectedIndex = 0;
-            this.TabPage.Size = new System.Drawing.Size(788, 393);
+            this.TabPage.Size = new System.Drawing.Size(690, 295);
             this.TabPage.TabIndex = 0;
             // 
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.dgvServices);
-            this.tabPage1.Location = new System.Drawing.Point(4, 29);
+            this.tabPage1.Location = new System.Drawing.Point(4, 24);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(780, 360);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPage1.Size = new System.Drawing.Size(682, 267);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Services";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -77,20 +79,23 @@
             // dgvServices
             // 
             this.dgvServices.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvServices.Location = new System.Drawing.Point(10, 9);
+            this.dgvServices.Location = new System.Drawing.Point(6, 4);
+            this.dgvServices.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvServices.Name = "dgvServices";
             this.dgvServices.RowHeadersWidth = 51;
             this.dgvServices.RowTemplate.Height = 29;
-            this.dgvServices.Size = new System.Drawing.Size(764, 345);
+            this.dgvServices.Size = new System.Drawing.Size(668, 259);
             this.dgvServices.TabIndex = 0;
+            this.dgvServices.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvServices_CellContentClick);
             // 
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.dgvRates);
-            this.tabPage2.Location = new System.Drawing.Point(4, 29);
+            this.tabPage2.Location = new System.Drawing.Point(4, 24);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(780, 360);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPage2.Size = new System.Drawing.Size(682, 267);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Rates";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -98,20 +103,22 @@
             // dgvRates
             // 
             this.dgvRates.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvRates.Location = new System.Drawing.Point(6, 6);
+            this.dgvRates.Location = new System.Drawing.Point(5, 4);
+            this.dgvRates.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvRates.Name = "dgvRates";
             this.dgvRates.RowHeadersWidth = 51;
             this.dgvRates.RowTemplate.Height = 29;
-            this.dgvRates.Size = new System.Drawing.Size(771, 348);
+            this.dgvRates.Size = new System.Drawing.Size(675, 261);
             this.dgvRates.TabIndex = 0;
             // 
             // tabPage3
             // 
             this.tabPage3.Controls.Add(this.dgvCounters);
-            this.tabPage3.Location = new System.Drawing.Point(4, 29);
+            this.tabPage3.Location = new System.Drawing.Point(4, 24);
+            this.tabPage3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(780, 360);
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPage3.Size = new System.Drawing.Size(682, 267);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Counters";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -119,20 +126,22 @@
             // dgvCounters
             // 
             this.dgvCounters.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCounters.Location = new System.Drawing.Point(3, 3);
+            this.dgvCounters.Location = new System.Drawing.Point(3, 2);
+            this.dgvCounters.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvCounters.Name = "dgvCounters";
             this.dgvCounters.RowHeadersWidth = 51;
             this.dgvCounters.RowTemplate.Height = 29;
-            this.dgvCounters.Size = new System.Drawing.Size(774, 351);
+            this.dgvCounters.Size = new System.Drawing.Size(677, 263);
             this.dgvCounters.TabIndex = 0;
             // 
             // tabPage4
             // 
             this.tabPage4.Controls.Add(this.dgvReadings);
-            this.tabPage4.Location = new System.Drawing.Point(4, 29);
+            this.tabPage4.Location = new System.Drawing.Point(4, 24);
+            this.tabPage4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(780, 360);
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPage4.Size = new System.Drawing.Size(682, 267);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Readings";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -140,18 +149,20 @@
             // dgvReadings
             // 
             this.dgvReadings.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvReadings.Location = new System.Drawing.Point(6, 3);
+            this.dgvReadings.Location = new System.Drawing.Point(5, 2);
+            this.dgvReadings.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvReadings.Name = "dgvReadings";
             this.dgvReadings.RowHeadersWidth = 51;
             this.dgvReadings.RowTemplate.Height = 29;
-            this.dgvReadings.Size = new System.Drawing.Size(768, 354);
+            this.dgvReadings.Size = new System.Drawing.Size(672, 266);
             this.dgvReadings.TabIndex = 0;
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(14, 399);
+            this.btnAdd.Location = new System.Drawing.Point(12, 299);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(94, 44);
+            this.btnAdd.Size = new System.Drawing.Size(82, 33);
             this.btnAdd.TabIndex = 1;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = true;
@@ -159,31 +170,36 @@
             // 
             // btnEdit
             // 
-            this.btnEdit.Location = new System.Drawing.Point(168, 399);
+            this.btnEdit.Location = new System.Drawing.Point(147, 299);
+            this.btnEdit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(107, 44);
+            this.btnEdit.Size = new System.Drawing.Size(94, 33);
             this.btnEdit.TabIndex = 2;
             this.btnEdit.Text = "Edit";
             this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(334, 399);
+            this.btnDelete.Location = new System.Drawing.Point(292, 299);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(119, 44);
+            this.btnDelete.Size = new System.Drawing.Size(104, 33);
             this.btnDelete.TabIndex = 3;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(700, 338);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.TabPage);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);

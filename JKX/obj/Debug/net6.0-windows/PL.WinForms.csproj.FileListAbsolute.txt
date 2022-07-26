@@ -46,3 +46,4 @@ C:\Users\Master\Documents\C_sharp\Repositories\jkx\JKX\obj\Debug\net6.0-windows\
 C:\Users\Master\Documents\C_sharp\Repositories\jkx\JKX\obj\Debug\net6.0-windows\PL.WinForms.EditRateForm.resources
 C:\Users\Master\Documents\C_sharp\Repositories\jkx\JKX\obj\Debug\net6.0-windows\PL.WinForms.EditReadingForm.resources
 C:\Users\Master\Documents\C_sharp\Repositories\jkx\JKX\obj\Debug\net6.0-windows\PL.WinForms.EditServiceForm.resources
+C:\Users\Master\Documents\C_sharp\Repositories\jkx\JKX\obj\Debug\net6.0-windows\PL.WinForms.DeleteForm.resources

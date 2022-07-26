@@ -22,7 +22,6 @@ namespace PL.WinForms
                 throw new ArgumentNullException(nameof(reading));
             }
             InitializeComponent();
-            //LocalUser = user;
             LocalReading = new Reading(
                 reading.Id,//
                 reading.ServiceId,

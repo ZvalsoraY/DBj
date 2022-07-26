@@ -101,17 +101,19 @@ AS
 
 CREATE PROCEDURE [dbo].[AddCounter]
 	@serviceId INT,
+	@name NVARCHAR(50),
 	@serialNumber INT,
 	@capacity INT,
 	@decimalCapacity INT,
 	@initialValue FLOAT,
 	@createData DATE
 AS
-	INSERT INTO dbo.Counters(ServiceId, SerialNumber, Capacity, DecimalCapacity, InitialValue, CreateData)
-	VALUES (@serviceId, @serialNumber, @capacity, @decimalCapacity, @initialValue, @createData)
+	INSERT INTO dbo.Counters(ServiceId, Name, SerialNumber, Capacity, DecimalCapacity, InitialValue, CreateData)
+	VALUES (@serviceId, @name, @serialNumber, @capacity, @decimalCapacity, @initialValue, @createData)
 	GO	
 CREATE PROCEDURE [dbo].[UpdateCounter]
 	@id INT,
+	@name NVARCHAR(50),
 	@serviceId INT,
 	@serialNumber INT,
 	@capacity INT,
@@ -120,7 +122,7 @@ CREATE PROCEDURE [dbo].[UpdateCounter]
 	@createData DATE
 AS 
 	UPDATE dbo.Counters
-	set ServiceId = @serviceId, SerialNumber = @serialNumber, Capacity = @capacity, DecimalCapacity = @decimalCapacity, InitialValue = @initialValue, CreateData = @createData
+	set ServiceId = @serviceId, Name = @name, SerialNumber = @serialNumber, Capacity = @capacity, DecimalCapacity = @decimalCapacity, InitialValue = @initialValue, CreateData = @createData
 	where Id = @id
 	GO
 CREATE PROC [dbo].[DeleteCounter]
