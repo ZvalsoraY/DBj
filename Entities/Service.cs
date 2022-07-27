@@ -32,7 +32,11 @@ namespace Entities
                 _name = value;
             }
         }
-        
+
+        public Service()
+        {
+            
+        }
         public Service(int id, string name)
         {
             Id = id;

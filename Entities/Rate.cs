@@ -83,6 +83,11 @@ namespace Entities
                 _serviceId = value;
             }
         }
+
+        public Rate()
+        {
+
+        }
         public Rate(int id, string name, int serviceId, int price, DateTime startData, DateTime endData)
         {
             Id = id;

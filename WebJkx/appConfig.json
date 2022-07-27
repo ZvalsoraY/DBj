@@ -1,0 +1,7 @@
+{
+  "Connection": {
+    "DataSource": "DESKTOP-H22B8UU",
+    "InnitialCatalog": "jkfDB"
+  },
+  "DALTypeIsDb": true //true - Db,false - list
+}

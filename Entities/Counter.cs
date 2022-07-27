@@ -111,6 +111,10 @@ namespace Entities
                 _createData = value;
             }
         }
+        public Counter()
+        {
+            
+        }
         public Counter(int id, string name, int serviceId, int serialNumber, int capacity, int decimalCapacity, double initialValue, DateTime createData)
         {
             Id = id;

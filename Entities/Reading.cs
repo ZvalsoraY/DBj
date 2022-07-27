@@ -56,7 +56,11 @@ namespace Entities
                 _transDate = value;
             }
         }
-              
+
+        public Reading()
+        {
+            
+        }
         public Reading(int id, int serviceId, double curValue, DateTime trunsDate)
         {
             Id = id;

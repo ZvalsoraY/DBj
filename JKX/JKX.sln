@@ -3,15 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32505.173
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PL.WinForms", "PL.WinForms.csproj", "{2A7B1871-CFA5-44C5-A317-FEF41A7941C4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PL.WinForms", "PL.WinForms.csproj", "{2A7B1871-CFA5-44C5-A317-FEF41A7941C4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLL", "..\BLL\BLL.csproj", "{4BDA1D74-E43A-417A-B579-9E367BA7E932}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BLL", "..\BLL\BLL.csproj", "{4BDA1D74-E43A-417A-B579-9E367BA7E932}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entities", "..\Entities\Entities.csproj", "{14978E5C-20EE-4B83-914C-15C584A748DC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entities", "..\Entities\Entities.csproj", "{14978E5C-20EE-4B83-914C-15C584A748DC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "..\DAL\DAL.csproj", "{AF249774-8136-4BCC-AE0E-6D7641B112DD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DAL", "..\DAL\DAL.csproj", "{AF249774-8136-4BCC-AE0E-6D7641B112DD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interfaces", "..\Interfaces\Interfaces.csproj", "{83ADC3FE-F238-4FC5-B320-DFEBDC9CE894}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Interfaces", "..\Interfaces\Interfaces.csproj", "{83ADC3FE-F238-4FC5-B320-DFEBDC9CE894}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebJkx", "..\WebJkx\WebJkx.csproj", "{C528C26C-5675-4570-A205-47484BBC6B6F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{83ADC3FE-F238-4FC5-B320-DFEBDC9CE894}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{83ADC3FE-F238-4FC5-B320-DFEBDC9CE894}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{83ADC3FE-F238-4FC5-B320-DFEBDC9CE894}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C528C26C-5675-4570-A205-47484BBC6B6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C528C26C-5675-4570-A205-47484BBC6B6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C528C26C-5675-4570-A205-47484BBC6B6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C528C26C-5675-4570-A205-47484BBC6B6F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
