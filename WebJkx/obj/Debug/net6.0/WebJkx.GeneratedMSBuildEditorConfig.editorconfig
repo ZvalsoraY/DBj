@@ -11,7 +11,7 @@ build_property.RootNamespace = WebJkx
 build_property.ProjectDir = C:\Users\Master\Documents\C_sharp\Repositories\jkx\WebJkx\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
-build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = true
 build_property.MSBuildProjectDirectory = C:\Users\Master\Documents\C_sharp\Repositories\jkx\WebJkx
 build_property._RazorSourceGeneratorDebug = 
 
@@ -37,6 +37,74 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Master/Documents/C_sharp/Repositories/jkx/WebJkx/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Master/Documents/C_sharp/Repositories/jkx/WebJkx/Views/Counter/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ291bnRlclxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Master/Documents/C_sharp/Repositories/jkx/WebJkx/Views/Counter/Insert.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ291bnRlclxJbnNlcnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Master/Documents/C_sharp/Repositories/jkx/WebJkx/Views/Counter/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ291bnRlclxVcGRhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Master/Documents/C_sharp/Repositories/jkx/WebJkx/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Master/Documents/C_sharp/Repositories/jkx/WebJkx/Views/Rate/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmF0ZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Master/Documents/C_sharp/Repositories/jkx/WebJkx/Views/Rate/Insert.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmF0ZVxJbnNlcnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Master/Documents/C_sharp/Repositories/jkx/WebJkx/Views/Rate/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmF0ZVxVcGRhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Master/Documents/C_sharp/Repositories/jkx/WebJkx/Views/Reading/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVhZGluZ1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Master/Documents/C_sharp/Repositories/jkx/WebJkx/Views/Reading/Insert.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVhZGluZ1xJbnNlcnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Master/Documents/C_sharp/Repositories/jkx/WebJkx/Views/Reading/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVhZGluZ1xVcGRhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Master/Documents/C_sharp/Repositories/jkx/WebJkx/Views/Service/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Master/Documents/C_sharp/Repositories/jkx/WebJkx/Views/Service/Insert.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljZVxJbnNlcnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Master/Documents/C_sharp/Repositories/jkx/WebJkx/Views/Service/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljZVxVcGRhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Master/Documents/C_sharp/Repositories/jkx/WebJkx/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Master/Documents/C_sharp/Repositories/jkx/WebJkx/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Master/Documents/C_sharp/Repositories/jkx/WebJkx/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Master/Documents/C_sharp/Repositories/jkx/WebJkx/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Master/Documents/C_sharp/Repositories/jkx/WebJkx/Pages/Shared/_Layout.cshtml]

@@ -1,4 +1,9 @@
-﻿using DAL;
+﻿using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
+using DAL;
 using Interfaces;
 using System.Data.SqlClient;
 namespace WebJkx
@@ -19,14 +24,15 @@ namespace WebJkx
             configurationBuilder.AddJsonFile("appConfig.json");
             var configuration = configurationBuilder.Build();
 
-            var connectionBuilder = new SqlConnectionStringBuilder
-            {
-                DataSource = configuration["Connection:DataSource"],
-                InitialCatalog = configuration["Connection:InnitialCatalog"],
-                IntegratedSecurity = true
-            };
+            //var connectionBuilder = new SqlConnectionStringBuilder
+            //{
+            //    DataSource = configuration["Connection:DataSource"],
+            //    InitialCatalog = configuration["Connection:InnitialCatalog"],
+            //    IntegratedSecurity = true
+            //};
 
-            var connectionString = connectionBuilder.ToString();
+            //var connectionString = connectionBuilder.ToString();
+            var connectionString = configuration["ConnectionString"];
             services.AddSingleton<ICounterDAO>(x => new CounterDAO(connectionString));
             services.AddSingleton<IRateDAO>(x => new RateDAO(connectionString));
             services.AddSingleton<IReadingDAO>(x => new ReadingDAO(connectionString));

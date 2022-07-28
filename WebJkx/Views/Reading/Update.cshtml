@@ -1,0 +1,26 @@
+﻿@model Entities.Reading
+@{
+    ViewData["Title"] = "Update";
+}
+
+<h1>Изменение Показания</h1>
+
+<form asp-controller="Reading" asp-action="Insert">
+     <input asp-for="Id" type="hidden" />
+
+    <label asp-for="ServiceId">Id услуги, к которой привязан тариф</label>
+    <input asp-for="ServiceId" />
+    <span asp-validation-for="ServiceId"></span>
+    <br />
+    <label asp-for="CurValue">Значение</label>
+    <input asp-for="CurValue" />
+    <span asp-validation-for="CurValue"></span>
+    <br />
+    <label asp-for="TransDate">Дата</label>
+    <input asp-for="TransDate" />
+    <span asp-validation-for="TransDate"></span>
+    <br />
+    <button type="submit">Сохранить</button>
+</form>
+
+

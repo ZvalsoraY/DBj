@@ -19,6 +19,9 @@
 //app.MapRazorPages();
 
 //app.Run();
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.Hosting;
+
 namespace WebJkx
 {
     public class Program

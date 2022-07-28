@@ -1,0 +1,45 @@
+﻿@model Entities.Counter
+@{
+    ViewData["Title"] = "Insert";
+}
+
+@*<th class="t">Id</th>
+        <th class="t">Название</th>
+        <th class="t">Id услуги</th>
+        <th class="t">Серийный номер</th>
+        <th class="t">Кол-во знаков до запятой</th>
+        <th class="t">Кол-во знаков после запятой</th>
+        <th class="t">Начальные показания</th>
+        <th class="t">Дата включения</th>*@
+<h1>Добавление счетчика</h1>
+<form asp-controller="Counter" asp-action="Insert">
+    <label asp-for="Name">Название счетчика</label>
+    <input asp-for="Name" />
+    <span asp-validation-for="Name"></span>
+    <br />
+    <label asp-for="ServiceId">Id услуги</label>
+    <input asp-for="ServiceId" />
+    <span asp-validation-for="ServiceId"></span>
+    <br />
+    <label asp-for="SerialNumber">Серийный номер</label>
+    <input asp-for="SerialNumber" />
+    <span asp-validation-for="SerialNumber"></span>
+    <br />
+    <label asp-for="Capacity">Кол-во знаков до запятой</label>
+    <input asp-for="Capacity" />
+    <span asp-validation-for="Capacity"></span>
+    <br />
+    <label asp-for="DecimalCapacity">Кол-во знаков после запятой</label>
+    <input asp-for="DecimalCapacity" />
+    <span asp-validation-for="DecimalCapacity"></span>
+    <br />
+    <label asp-for="InitialValue">Начальные показания</label>
+    <input asp-for="InitialValue" />
+    <span asp-validation-for="InitialValue"></span>
+    <br />
+    <label asp-for="CreateData">Дата включения</label>
+    <input asp-for="CreateData" />
+    <span asp-validation-for="CreateData"></span>
+    <br />
+    <button type="submit">Сохранить</button>
+</form>

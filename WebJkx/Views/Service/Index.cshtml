@@ -1,0 +1,32 @@
+﻿@model IEnumerable<Entities.Service>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Yслуги</h1>
+<table class="table">
+    <tr>
+        <th class="t">Id</th>
+        <th class="t">Название</th>        
+    </tr>
+
+    @foreach (var service in Model)
+    {
+        <tr>
+            <td class="t">@service.Id</td>
+            <td class="t">@service.Name</td>
+            <td>
+                <form asp-controller="Service" asp-action="Delete">
+                    <input value="@service.Id" name="id" type="hidden" />
+                    <button type="submit">Удалить</button>
+                </form>
+                <br/>
+                <a asp-controller="Service" asp-action="Update" asp-route-id="@service.Id" class="button-my">Обновить</a>
+            </td>
+        </tr>
+    }
+
+
+
+</table>
+<a asp-controller="Service" asp-action="Insert" Class="button-my">Добавить услугy</a>

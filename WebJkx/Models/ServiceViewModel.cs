@@ -7,7 +7,7 @@ namespace WebJkx.Models
     {
         public int Id { get; set; }
 
-        [Required]
+        [Required, MaxLength(50)]
         public string Name { get; set; }
 
         public ServiceViewModel()

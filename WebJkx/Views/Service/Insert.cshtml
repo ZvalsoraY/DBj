@@ -1,0 +1,13 @@
+﻿@model Entities.Service
+@{
+    ViewData["Title"] = "Insert";
+}
+
+<h1>Добавление услуги</h1>
+<form asp-controller="Service" asp-action="Insert">
+    <label asp-for="Name">Название услуги</label>
+    <input asp-for="Name" />
+    <span asp-validation-for="Name"></span>
+    <br />
+    <button type="submit">Сохранить</button>
+</form>

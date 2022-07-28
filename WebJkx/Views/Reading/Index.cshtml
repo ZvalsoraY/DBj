@@ -1,0 +1,34 @@
+﻿@model IList<Entities.Reading>
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+<h1>Показания</h1>
+<table class="table">
+    <tr>
+        <th class="t">Id</th>
+        <th class="t">Id услуги, к которой привязан тариф</th>
+        <th class="t">Значение</th>
+        <th class="t">Дата </th>
+    </tr>
+
+    @foreach (var reading in Model)
+    {
+        <tr>
+            <td class="t">@reading.Id</td>
+            <td class="t">@reading.ServiceId</td>
+            <td class="t">@reading.CurValue</td>
+            <td class="t">@reading.TransDate</td>
+            <td>
+                <form asp-controller="Reading" asp-action="Delete">
+                    <input value="@reading.Id" name="id" type="hidden" />
+                    <button type="submit">Удалить</button>
+                </form>
+                <br/>
+                <a asp-controller="Reading" asp-action="Update" asp-route-id="@reading.Id" class="button-my">Обновить</a>
+            </td>
+        </tr>
+    }
+</table>
+<a asp-controller="Reading" asp-action="Insert" Class="button-my">Добавить Показаниe</a>
