@@ -37,5 +37,20 @@ namespace DAL
         {
             _rates.Remove(rate);
         }
+
+        public List<Rate> GetServicesRates(Service service)
+        {
+            var servicesRates = new List<Rate>();
+
+            for (int i = 0; i < _rates.Count; i++)
+            {
+                if (_rates[i].Id == service.Id)
+                    {
+                        servicesRates.Add(_rates[i]);
+                    }
+            
+            }
+            return servicesRates;
+        }
     }
 }

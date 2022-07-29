@@ -88,5 +88,38 @@ namespace DAL
                 command.ExecuteNonQuery();
             }
         }
+
+        List<Rate> IRateDAO.GetServicesRates(Service service)
+        {
+            var rates = new List<Rate>();
+
+            using (var connection = new SqlConnection(_connectionString))
+            using (var command = new SqlCommand("Exec GetServicesRates @serviceId", connection))
+            //using (var command = new SqlCommand("SELECT [Id], [Name], [ServiceId], [Price], [StartData], [EndData] FROM dbo.Rates", connection))
+
+            {
+                connection.Open();
+
+                command.Parameters.Add("serviceId", System.Data.SqlDbType.Int).Value = service.Id;
+
+                var reader = command.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    var rate = new Rate
+                    (
+                        reader.GetInt32(0),
+                        reader.GetString(1),
+                        reader.GetInt32(2),
+                        reader.GetInt32(3),
+                        reader.GetDateTime(4),
+                        reader.GetDateTime(5)
+                    );
+                    rates.Add(rate); ;
+                }
+            }
+
+            return rates;
+        }
     }
 }

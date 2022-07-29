@@ -96,6 +96,14 @@ AS
 	DELETE FROM dbo.Rates 
 	WHERE Id = @id
 	GO
+	
+CREATE PROC [dbo].[GetServicesRates]
+	@serviceId INT
+AS
+	SELECT *
+	FROM Rates 
+	WHERE Rates.ServiceId = @serviceId
+GO
 
 --------------------------------------------------------------------
 

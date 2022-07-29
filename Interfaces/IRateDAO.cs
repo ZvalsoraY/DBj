@@ -13,5 +13,7 @@ namespace Interfaces
         void Add(Rate rate);
         void Edit(Rate rate);
         void Delete(Rate rate);
+
+        List<Rate> GetServicesRates(Service service);
     }
 }

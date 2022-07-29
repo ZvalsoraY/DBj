@@ -76,5 +76,26 @@ namespace DAL
                 command.ExecuteNonQuery();
             }
         }
+
+        Service IServiceDAO.GetServiceById(int id)
+        {
+            var service = new Service();
+            using (var connection = new SqlConnection(_connectionString))
+            using (var command = new SqlCommand("EXEC GetServiceById @Id", connection))
+            {
+                connection.Open();
+
+                command.Parameters.Add("Id", System.Data.SqlDbType.Int).Value = id;
+
+                var reader = command.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    service.Id = reader.GetInt32(0);
+                    service.Name = reader.GetString(1);
+                }
+                return service;
+            }
+        }
     }
 }

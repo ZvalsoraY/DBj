@@ -1,0 +1,68 @@
+﻿@*@model IEnumerable<Entities.Rate>
+@{
+    ViewData["Title"] = "AddRate";
+}
+
+<h1>Добавить тариф <label></label></h1>
+
+<table class="table">
+    <tr>
+        <th class="t">Id</th>
+        <th class="t">Название</th>
+        <th class="t">Цена за единицу</th>
+        <th class="t">Дата начала работы</th>
+        <th class="t">Дата окончания работы</th>
+        <th class="t">Id услуги, к которой привязан тариф</th>
+    </tr>
+
+    @foreach (var rate in Model)
+    {
+        <tr>
+            <td class="t">@rate.Id</td>
+            <td class="t">@rate.Name</td>
+            <td class="t">@rate.Price</td>
+            <td class="t">@rate.StartData</td>
+            <td class="t">@rate.EndData</td>
+            <td>
+                <form asp-controller="Service" asp-action="AddRate">
+                    <input value="@rate.ServiceId" name="serviceId" type="hidden" />
+                    <button type="submit">Добавить</button>
+                </form>
+
+            </td>
+        </tr>
+    }
+</table>
+
+<a asp-controller="ServiceRates" asp-action="Index" Class="button-my">Назад</a>*@
+
+
+@model Entities.Rate
+@{
+    ViewData["Title"] = "AddRate";
+}
+
+<h1>Добавление тарифа</h1>
+<form asp-controller="Rate" asp-action="Insert">
+    <label asp-for="Name">Название тарифа</label>
+    <input asp-for="Name" />
+    <span asp-validation-for="Name"></span>
+    <br />
+    <label asp-for="Price">Цена за единицу</label>
+    <input asp-for="Price" />
+    <span asp-validation-for="Price"></span>
+    <br />
+    <label asp-for="StartData">Дата начала работы</label>
+    <input asp-for="StartData" />
+    <span asp-validation-for="StartData"></span>
+    <br />
+    <label asp-for="EndData">Дата окончания работы</label>
+    <input asp-for="EndData" />
+    <span asp-validation-for="EndData"></span>
+    <br />
+    <label asp-for="ServiceId">Id услуги, к которой привязан тариф</label>
+    <input asp-for="ServiceId" />
+    <span asp-validation-for="ServiceId"></span>
+    <br />
+    <button type="submit">Сохранить</button>
+</form>

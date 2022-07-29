@@ -13,5 +13,6 @@ namespace Interfaces
         void Add(Service service);
         void Edit(Service service);
         void Delete(Service service);
+        Service GetServiceById(int id);
     }
 }
