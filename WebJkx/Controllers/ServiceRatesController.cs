@@ -37,6 +37,7 @@ namespace WebJkx.Controllers
 
             return RedirectToAction("NoRateError");
         }
+        //______________________________________________________________________
         [HttpGet]
         public IActionResult AddRate()
         {
@@ -44,31 +45,62 @@ namespace WebJkx.Controllers
         }
 
         [HttpPost]
-        public IActionResult AddRate(int Id)
+        public IActionResult AddRate(Rate rate,int serviceId)
         {
-            var addRate = new Rate
-            {
-                ServiceId = Id
-            };
+            //Entities.Rate.ServiceId = serviceId;
             if (!ModelState.IsValid)
             {
-                return View(addRate);
+                return View(rate);
             }
 
-            //var rateToInsert = new Rate
-            //(
-            //    rate.Id,
-            //    rate.Name,
-            //    rate.ServiceId,
-            //    rate.Price,
-            //    rate.StartData,
-            //    rate.EndData
-            //);
+            var rateToInsert = new Rate
+            (
+                rate.Id,
+                rate.Name,
+                rate.ServiceId = serviceId,
+                rate.Price,
+                rate.StartData,
+                rate.EndData
+            );
 
-            rateDAO.Add(addRate);
-
-            return RedirectToAction("Index");
+            rateDAO.Add(rateToInsert);
+            return RedirectToAction("IndexRate");
+            //return RedirectToAction("Index");
         }
+        //[HttpGet]
+        //public IActionResult AddRate()
+        //{
+        //    return View();
+        //}
+
+        //[HttpPost]
+        //public IActionResult AddRate(int ServiceId)
+        //{
+        //    // Model
+
+        //    var addRate = new Rate
+        //    {
+        //        //ServiceId = Id
+        //    };
+        //    if (!ModelState.IsValid)
+        //    {
+        //        return View(addRate);
+        //    }
+
+        //    //var rateToInsert = new Rate
+        //    //(
+        //    //    rate.Id,
+        //    //    rate.Name,
+        //    //    rate.ServiceId,
+        //    //    rate.Price,
+        //    //    rate.StartData,
+        //    //    rate.EndData
+        //    //);
+
+        //    rateDAO.Add(addRate);
+
+        //    return RedirectToAction("Index");
+        //}
         //[HttpGet]
         //public IActionResult AddRate(int Id)
         //{
