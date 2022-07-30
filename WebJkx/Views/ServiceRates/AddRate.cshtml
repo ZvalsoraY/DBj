@@ -1,49 +1,11 @@
-﻿@*@model IEnumerable<Entities.Rate>
-@{
-    ViewData["Title"] = "AddRate";
-}
-
-<h1>Добавить тариф <label></label></h1>
-
-<table class="table">
-    <tr>
-        <th class="t">Id</th>
-        <th class="t">Название</th>
-        <th class="t">Цена за единицу</th>
-        <th class="t">Дата начала работы</th>
-        <th class="t">Дата окончания работы</th>
-        <th class="t">Id услуги, к которой привязан тариф</th>
-    </tr>
-
-    @foreach (var rate in Model)
-    {
-        <tr>
-            <td class="t">@rate.Id</td>
-            <td class="t">@rate.Name</td>
-            <td class="t">@rate.Price</td>
-            <td class="t">@rate.StartData</td>
-            <td class="t">@rate.EndData</td>
-            <td>
-                <form asp-controller="Service" asp-action="AddRate">
-                    <input value="@rate.ServiceId" name="serviceId" type="hidden" />
-                    <button type="submit">Добавить</button>
-                </form>
-
-            </td>
-        </tr>
-    }
-</table>
-
-<a asp-controller="ServiceRates" asp-action="Index" Class="button-my">Назад</a>*@
-
-
-@model Entities.Rate
+﻿@model Entities.Rate
 @{
     ViewData["Title"] = "AddRate";
 }
 
 <h1>Добавление тарифа</h1>
 <form asp-controller="ServiceRates" asp-action="AddRate">
+
     <label asp-for="Name">Название тарифа</label>
     <input asp-for="Name" />
     <span asp-validation-for="Name"></span>
@@ -66,3 +28,6 @@
     <br />
     <button type="submit">Сохранить</button>
 </form>
+
+
+

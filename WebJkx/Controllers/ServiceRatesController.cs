@@ -39,34 +39,51 @@ namespace WebJkx.Controllers
         }
         //______________________________________________________________________
         [HttpGet]
-        public IActionResult AddRate()
+        public IActionResult AddRate(int id)
         {
-            return View();
+            var rateViewModel = new Rate
+            (
+
+                "Тариф для "+serviceDAO.GetServiceById(id).Name,
+                id,
+                0,
+                DateTime.Now,
+                DateTime.Now
+            );
+            return View(rateViewModel);
         }
 
         [HttpPost]
-        public IActionResult AddRate(Rate rate,int serviceId)
+        public IActionResult AddRate(Rate rate)
         {
-            //Entities.Rate.ServiceId = serviceId;
             if (!ModelState.IsValid)
             {
                 return View(rate);
             }
-
             var rateToInsert = new Rate
             (
                 rate.Id,
                 rate.Name,
-                rate.ServiceId = serviceId,
+                rate.ServiceId,
                 rate.Price,
                 rate.StartData,
                 rate.EndData
             );
+            //var rateToInsert = new Rate
+            //{
+            //    Id = rate.Id,
+            //    Name = rate.Name,
+            //    ServiceId = rate.ServiceId,
+            //    Price = rate.Price,
+            //    StartData = rate.StartData,
+            //    EndData = rate.EndData
+            //};
 
             rateDAO.Add(rateToInsert);
-            return RedirectToAction("IndexRate");
-            //return RedirectToAction("Index");
+
+            return RedirectToAction("Index");
         }
+        
         //[HttpGet]
         //public IActionResult AddRate()
         //{
