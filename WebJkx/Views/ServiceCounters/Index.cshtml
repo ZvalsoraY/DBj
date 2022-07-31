@@ -17,9 +17,9 @@
             <td class="t">@service.Name</td>
             <td>
                 
-                <a asp-controller="ServiceRates" asp-action="ShowCounters" asp-route-id="@service.Id" class="button-my">Показать счетчики</a>
+                <a asp-controller="ServiceCounters" asp-action="ShowCounters" asp-route-id="@service.Id" class="button-my">Показать счетчики</a>
                 <br />
-                <a asp-controller="ServiceRates" asp-action="AddCounter" asp-route-id="@service.Id" class="button-my">Добавить счетчики</a>
+                <a asp-controller="ServiceCounters" asp-action="AddCounter" asp-route-id="@service.Id" class="button-my">Добавить счетчики</a>
             </td>
         </tr>
     }

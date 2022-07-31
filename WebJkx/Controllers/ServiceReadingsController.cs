@@ -3,16 +3,16 @@ using Entities;
 using Interfaces;
 namespace WebJkx.Controllers
 {
-    public class ServiceRatesController : Controller
+    public class ServiceReadingsController : Controller
     {
         private readonly IServiceDAO serviceDAO;
-        private readonly IRateDAO rateDAO;
+        private readonly IReadingDAO readingDAO;
 
         
-        public ServiceRatesController(IServiceDAO serviceDAO, IRateDAO rateDAO)
+        public ServiceReadingsController(IServiceDAO serviceDAO, IReadingDAO readingDAO)
         {
             this.serviceDAO = serviceDAO;
-            this.rateDAO = rateDAO;
+            this.readingDAO = readingDAO;
         }
 
         [HttpGet]
@@ -24,74 +24,60 @@ namespace WebJkx.Controllers
         }
         
         [HttpGet]
-        public IActionResult ShowRates(int id)
+        public IActionResult ShowReadings(int id)
         {
             var service = serviceDAO.GetServiceById(id);
 
-            var ratesOfService = rateDAO.GetServicesRates(service);
+            var readingsOfService = readingDAO.GetServicesReadings(service);
 
-            if (ratesOfService.Count > 0)
+            if (readingsOfService.Count > 0)
             {
-                return View(ratesOfService);
+                return View(readingsOfService);
             }
 
-            return RedirectToAction("NoRateError");
+            return RedirectToAction("NoReadingError");
         }
         //______________________________________________________________________
         [HttpGet]
-        public IActionResult AddRate(int id)
+        public IActionResult AddReading(int id)
         {
-            var rateViewModel = new Rate
+            var readingViewModel = new Reading
             (
 
-                "Тариф для "+serviceDAO.GetServiceById(id).Name,
                 id,
                 0,
-                DateTime.Now,
                 DateTime.Now
             );
-            return View(rateViewModel);
+            return View(readingViewModel);
         }
 
         [HttpPost]
-        public IActionResult AddRate(Rate rate)
+        public IActionResult AddReading(Reading reading)
         {
             if (!ModelState.IsValid)
             {
-                return View(rate);
+                return View(reading);
             }
-            var rateToInsert = new Rate
+            var readingToInsert = new Reading
             (
-                rate.Id,
-                rate.Name,
-                rate.ServiceId,
-                rate.Price,
-                rate.StartData,
-                rate.EndData
+                reading.Id,
+                reading.ServiceId,
+                reading.CurValue,
+                reading.TransDate
             );
-            //var rateToInsert = new Rate
-            //{
-            //    Id = rate.Id,
-            //    Name = rate.Name,
-            //    ServiceId = rate.ServiceId,
-            //    Price = rate.Price,
-            //    StartData = rate.StartData,
-            //    EndData = rate.EndData
-            //};
-
-            rateDAO.Add(rateToInsert);
+            readingDAO.Add(readingToInsert);
 
             return RedirectToAction("Index");
         }
         
         [HttpGet]
-        public IActionResult HaveRateError()
+        public IActionResult HaveReadingError()
         {
             return View();
         }
 
         [HttpGet]
-        public IActionResult NoRateError()
+        public IActionResult NoReadingError()
         {
             return View();
         }

@@ -181,5 +181,13 @@ AS
 	DELETE FROM dbo.Readings 
 	WHERE Id = @id
 	GO
+	
+CREATE PROC [dbo].[GetServicesReadings]
+	@serviceId INT
+AS
+	SELECT *
+	FROM Readings 
+	WHERE Readings.ServiceId = @serviceId
+GO
 
 --------------------------------------------------------------------

@@ -1,0 +1,28 @@
+﻿@model List<Entities.Reading>
+@{
+    ViewData["Title"] = "ShowReadings";
+}
+
+<h1>Показания за услугу</h1>
+
+<table class="table">
+    <tr>
+        <th class="t">Id</th>
+        <th class="t">Id услуги, к которой привязан тариф</th>
+        <th class="t">Значение</th>
+        <th class="t">Дата </th>
+    </tr>
+
+    @foreach (var reading in Model)
+    {
+        <tr>
+            <td class="t">@reading.Id</td>
+            <td class="t">@reading.ServiceId</td>
+            <td class="t">@reading.CurValue</td>
+            <td class="t">@reading.TransDate</td>
+            
+        </tr>
+    }
+</table>
+
+<a asp-controller="ServiceReadings" asp-action="Index" Class="button-my">Назад</a>

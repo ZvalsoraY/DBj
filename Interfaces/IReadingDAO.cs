@@ -13,5 +13,7 @@ namespace Interfaces
         void Add(Reading reading);
         void Edit(Reading reading);
         void Delete(Reading reading);
+
+        List<Reading> GetServicesReadings(Service service);
     }
 }

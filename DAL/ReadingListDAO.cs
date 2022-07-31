@@ -34,5 +34,19 @@ namespace DAL
         {
             _readings.Remove(reading);
         }
+        public List<Reading> GetServicesReadings(Service service)
+        {
+            var servicesReadings = new List<Reading>();
+
+            for (int i = 0; i < _readings.Count; i++)
+            {
+                if (_readings[i].Id == service.Id)
+                {
+                    servicesReadings.Add(_readings[i]);
+                }
+
+            }
+            return servicesReadings;
+        }
     }
 }
