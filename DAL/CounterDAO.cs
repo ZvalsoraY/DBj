@@ -96,5 +96,37 @@ namespace DAL
                 command.ExecuteNonQuery();
             }
         }
+        List<Counter> ICounterDAO.GetServicesCounters(Service service)
+        {
+            var counters = new List<Counter>();
+
+            using (var connection = new SqlConnection(_connectionString))
+            using (var command = new SqlCommand("Exec GetServicesCounters @serviceId", connection))
+            {
+                connection.Open();
+
+                command.Parameters.Add("serviceId", System.Data.SqlDbType.Int).Value = service.Id;
+
+                var reader = command.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    var counter = new Counter
+                    (
+                        reader.GetInt32(0),
+                        reader.GetString(1),
+                        reader.GetInt32(2),
+                        reader.GetInt32(3),
+                        reader.GetInt32(4),
+                        reader.GetInt32(5),
+                        reader.GetDouble(6),
+                        reader.GetDateTime(7)
+                    );
+                    counters.Add(counter); ;
+                }
+            }
+
+            return counters;
+        }
     }
 }

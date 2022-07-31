@@ -13,5 +13,6 @@ namespace Interfaces
         void Add(Counter counter);
         void Edit(Counter counter);
         void Delete(Counter counter);
+        List<Counter> GetServicesCounters(Service service);
     }
 }

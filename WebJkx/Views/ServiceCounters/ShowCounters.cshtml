@@ -1,0 +1,36 @@
+﻿@model List<Entities.Counter>
+@{
+    ViewData["Title"] = "ShowCounters";
+}
+
+<h1>Тарифы услуги</h1>
+
+<table class="table">
+    <tr>
+        <th class="t">Id</th>
+        <th class="t">Название</th>
+        <th class="t">Id услуги</th>
+        <th class="t">Серийный номер</th>
+        <th class="t">Кол-во знаков до запятой</th>
+        <th class="t">Кол-во знаков после запятой</th>
+        <th class="t">Начальные показания</th>
+        <th class="t">Дата включения</th>
+    </tr>
+
+    @foreach (var counter in Model)
+    {
+        <tr>
+            <td class="t">@counter.Id</td>
+            <td class="t">@counter.Name</td>
+            <td class="t">@counter.ServiceId</td>
+            <td class="t">@counter.SerialNumber</td>
+            <td class="t">@counter.Capacity</td>
+            <td class="t">@counter.DecimalCapacity</td>
+            <td class="t">@counter.InitialValue</td>
+            <td class="t">@counter.CreateData</td>
+            
+        </tr>
+    }
+</table>
+
+<a asp-controller="ServiceCounters" asp-action="Index" Class="button-my">Назад</a>

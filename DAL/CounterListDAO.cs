@@ -33,5 +33,19 @@ namespace DAL
         {
             _counters.Remove(counter);
         }
+        public List<Counter> GetServicesCounters(Service service)
+        {
+            var servicesCounters = new List<Counter>();
+
+            for (int i = 0; i < _counters.Count; i++)
+            {
+                if (_counters[i].Id == service.Id)
+                {
+                    servicesCounters.Add(_counters[i]);
+                }
+
+            }
+            return servicesCounters;
+        }
     }
 }

@@ -1,0 +1,60 @@
+﻿@model List<Entities.Rate>
+@{
+    ViewData["Title"] = "ShowRates";
+}
+
+<h1>Тарифы услуги</h1>
+
+<table class="table">
+    <tr>
+        <th class="t">Id</th>
+        <th class="t">Название</th>
+        <th class="t">Цена за единицу</th>
+        <th class="t">Дата начала работы</th>
+        <th class="t">Дата окончания работы</th>
+        <th class="t">Id услуги, к которой привязан тариф</th>
+    </tr>
+
+    @foreach (var rate in Model)
+    {
+        <tr>
+            <td class="t">@rate.Id</td>
+            <td class="t">@rate.Name</td>
+            <td class="t">@rate.Price</td>
+            <td class="t">@rate.StartData</td>
+            <td class="t">@rate.EndData</td>
+            <td class="t">@rate.ServiceId</td>
+            
+        </tr>
+            @*<td>
+                <form asp-controller="Service" asp-action="AddRate">
+                    <input value="@rate.ServiceId" name="serviceId" type="hidden" />
+                    <input value="@reward.Id" name="rewardid" type="hidden" />
+                    <button type="submit">Добавить</button>
+                </form>
+
+            </td>*@
+    }
+</table>
+
+<a asp-controller="ServiceRates" asp-action="Index" Class="button-my">Назад</a>
+@*
+    @foreach (var rate in Model)
+    {
+        <tr>
+            <td class="t">@rate.Id</td>
+            <td class="t">@rate.Name</td>
+            <td class="t">@rate.Price</td>
+            <td class="t">@rate.StartData</td>
+            <td class="t">@rate.EndData</td>
+            <td class="t">@rate.ServiceId</td>
+            <td>
+                <form asp-controller="Rate" asp-action="Delete">
+                    <input value="@rate.Id" name="id" type="hidden" />
+                    <button type="submit">Удалить</button>
+                </form>
+                <br/>
+                <a asp-controller="Rate" asp-action="Update" asp-route-id="@rate.Id" class="button-my">Обновить</a>
+            </td>
+        </tr>
+    }*@

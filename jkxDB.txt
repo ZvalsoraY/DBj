@@ -66,6 +66,13 @@ AS
 	WHERE Id = @id
 	GO
 	
+CREATE PROC [dbo].[GetServiceById]
+	@Id INT
+AS
+	SELECT *
+	FROM Services 
+	WHERE Services.Id = @Id
+GO
 --------------------------------------------------------------------
 	
 CREATE PROCEDURE [dbo].[AddRate]
@@ -139,6 +146,14 @@ AS
 	DELETE FROM dbo.Counters 
 	WHERE Id = @id
 	GO
+	
+CREATE PROC [dbo].[GetServicesCounters]
+	@serviceId INT
+AS
+	SELECT *
+	FROM Counters 
+	WHERE Counters.ServiceId = @serviceId
+GO
 
 --------------------------------------------------------------------
 

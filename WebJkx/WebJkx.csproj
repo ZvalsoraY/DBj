@@ -18,7 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Views\NewFolder\" />
+    <Folder Include="Views\ServiceReadings\" />
   </ItemGroup>
 
 </Project>

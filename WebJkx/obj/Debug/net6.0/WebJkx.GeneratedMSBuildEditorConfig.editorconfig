@@ -79,6 +79,38 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVhZGluZ1xVcGRhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Master/Documents/C_sharp/Repositories/jkx/WebJkx/Views/ServiceCounters - Copy/AddRate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljZUNvdW50ZXJzIC0gQ29weVxBZGRSYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Master/Documents/C_sharp/Repositories/jkx/WebJkx/Views/ServiceCounters - Copy/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljZUNvdW50ZXJzIC0gQ29weVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Master/Documents/C_sharp/Repositories/jkx/WebJkx/Views/ServiceCounters - Copy/NoRateError.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljZUNvdW50ZXJzIC0gQ29weVxOb1JhdGVFcnJvci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Master/Documents/C_sharp/Repositories/jkx/WebJkx/Views/ServiceCounters - Copy/ShowRates.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljZUNvdW50ZXJzIC0gQ29weVxTaG93UmF0ZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Master/Documents/C_sharp/Repositories/jkx/WebJkx/Views/ServiceCounters/AddCounter.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljZUNvdW50ZXJzXEFkZENvdW50ZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Master/Documents/C_sharp/Repositories/jkx/WebJkx/Views/ServiceCounters/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljZUNvdW50ZXJzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Master/Documents/C_sharp/Repositories/jkx/WebJkx/Views/ServiceCounters/NoCounterError.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljZUNvdW50ZXJzXE5vQ291bnRlckVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Master/Documents/C_sharp/Repositories/jkx/WebJkx/Views/ServiceCounters/ShowCounters.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljZUNvdW50ZXJzXFNob3dDb3VudGVycy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Master/Documents/C_sharp/Repositories/jkx/WebJkx/Views/ServiceRates/AddRate.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljZVJhdGVzXEFkZFJhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
