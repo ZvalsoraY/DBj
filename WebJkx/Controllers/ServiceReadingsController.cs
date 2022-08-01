@@ -8,13 +8,15 @@ namespace WebJkx.Controllers
         private readonly IServiceDAO serviceDAO;
         private readonly IReadingDAO readingDAO;
         private readonly IRateDAO rateDAO;
+        private readonly ICounterDAO counterDAO;
 
 
-        public ServiceReadingsController(IServiceDAO serviceDAO, IReadingDAO readingDAO, IRateDAO rateDAO)
+        public ServiceReadingsController(IServiceDAO serviceDAO, IReadingDAO readingDAO, IRateDAO rateDAO, ICounterDAO counterDAO)
         {
             this.serviceDAO = serviceDAO;
             this.readingDAO = readingDAO;
             this.rateDAO = rateDAO;
+            this.counterDAO = counterDAO;
         }
 
         [HttpGet]
@@ -88,32 +90,39 @@ namespace WebJkx.Controllers
         public IActionResult ShowDebt(int id)
         {
             var service = serviceDAO.GetServiceById(id);
-
             var readingsOfService = readingDAO.GetServicesReadings(service);
-
             var ratesOfService = rateDAO.GetServicesRates(service);
+            var counterOfService = counterDAO.GetServicesCounters(service);
+
             double sumDept = 0;
 
             if (readingsOfService.Count > 0 && ratesOfService.Count > 0)
             {
                 ratesOfService.OrderBy(d => d.EndData);
-                for(int i = 0; i < ratesOfService.Count; i++)
+                for(int i = 0; i < ratesOfService.Count; i++)//проход по тарифам для услуги
                 {
-                    double readingIni = ratesOfService[i].ini;
+                    double readingIni = counterOfService.Last().InitialValue;
                     double readingLast = 0;
-                    int lastIndex = 0;
-                    DateTime datePerem = DateTime.Now.AddYears(-150);
-                    foreach(var r in readingsOfService)
+                    DateTime datePeremIni = counterOfService.Last().CreateData;
+                    DateTime datePeremLast = DateTime.Now.AddYears(-150);
+                    foreach(var r in readingsOfService)// проход по показаниям
                     {
-                        if (r.TransDate < ratesOfService[i].EndData && r.TransDate > datePerem)
+                        if(r.TransDate < ratesOfService[i].StartData && r.TransDate > datePeremIni)
                         {
-                            datePerem = r.TransDate;
+                            datePeremIni = r.TransDate;
+                            readingIni = r.CurValue;
+                        }
+                        if (r.TransDate < ratesOfService[i].EndData && r.TransDate > datePeremLast)
+                        {
+                            datePeremLast = r.TransDate;
                             readingLast = r.CurValue;
                         }
+
                     }
-                    sumDept += (readingLast - readingIni) * ratesOfService[i].Price 
+                    sumDept += (readingLast - readingIni) * ratesOfService[i].Price; 
                 }
-                return View(readingsOfService);
+                ViewData["SumDept"] = sumDept;
+                return View(sumDept);
             }
 
 
